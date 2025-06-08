@@ -4,7 +4,7 @@ import type { WebSocket } from "ws";
 import fetch, { Response as FetchResponse } from "node-fetch";
 
 const PORT = process.env.PORT ? parseInt(process.env.PORT) : 8081;
-const ANTPP_ENDPOINT = process.env.ANTPP_ENDPOINT || "http://localhost:8080/";
+const ANTPP_ENDPOINT = process.env.ANTPP_ENDPOINT || "http://localhost:8080";
 
 // This allows paths like: abcdef...64/filename.png or deeper (e.g. /images/file.png)
 const PATH_REGEX = /^[a-f0-9]{64}(\/[\w\-._~:@!$&'()*+,;=]+)*$/i;
