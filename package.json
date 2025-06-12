@@ -7,8 +7,9 @@
 "scripts": {
   "build": "tsc",
   "start:anttp": "node start-anttp.js",
-  "start:server": "node dist/server.js",
-  "start": "concurrently --kill-others \"npm run start:anttp\" \"npm run start:server\""
+  "start:dweb": "node start-dweb.js",
+  "start:server": "node dist/src/server.js",
+  "start": "concurrently --kill-others  \"npm run start:anttp\"  \"npm run start:dweb\" \"npm run start:server\""
 },
   "dependencies": {
     "node-fetch": "^3.3.2",
