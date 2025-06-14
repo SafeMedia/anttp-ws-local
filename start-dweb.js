@@ -43,12 +43,12 @@ console.log("Binary path:", binaryPath);
 console.log("Exists:", fs.existsSync(binaryPath));
 
 // Default port or listen address for DWEB (should be consistent with your other configs)
-const listenAddress = process.env.DWEB_PORT || "127.0.0.1:8083"; 
+const listenAddress = process.env.DWEB_PORT || 8083; 
 
 console.log(`Starting anttp on ${listenAddress}`);
 
 // Spawn dweb process
-const child = spawn(binaryPath, ["serve"], {
+const child = spawn(binaryPath, ["serve", "--port", listenAddress], {
   stdio: "inherit",
   shell: false,
 });
